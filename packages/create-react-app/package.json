@@ -1,24 +1,24 @@
 {
-  "name": "create-react-app",
-  "version": "1.5.2",
+  "name": "nitro-react-app",
+  "version": "0.3.0",
   "keywords": [
     "react"
   ],
   "description": "Create React apps with no build configuration.",
-  "repository": "facebookincubator/create-react-app",
+  "repository": "vinaymavi/nitro-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=4"
   },
   "bugs": {
-    "url": "https://github.com/facebookincubator/create-react-app/issues"
+    "url": "https://github.com/vinaymavi/nitro-react-app/issues"
   },
   "files": [
     "index.js",
     "createReactApp.js"
   ],
   "bin": {
-    "create-react-app": "./index.js"
+    "nitro-react-app": "./index.js"
   },
   "dependencies": {
     "chalk": "^1.1.1",

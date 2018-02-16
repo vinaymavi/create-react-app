@@ -109,7 +109,7 @@ const program = new commander.Command(packageJson.name)
 if (typeof projectName === 'undefined') {
   if (program.info) {
     envinfo.print({
-      packages: ['react', 'react-dom', 'react-scripts'],
+      packages: ['react', 'react-dom', 'nitro-react-scripts'],
       noNativeIDE: true,
       duplicates: true,
     });
@@ -381,7 +381,7 @@ function run(
 }
 
 function getInstallPackage(version, originalDirectory) {
-  let packageToInstall = 'react-scripts';
+  let packageToInstall = 'nitro-react-scripts';
   const validSemver = semver.valid(version);
   if (validSemver) {
     packageToInstall += `@${validSemver}`;
@@ -481,7 +481,10 @@ function getPackageName(installPackage) {
     );
   } else if (installPackage.match(/^file:/)) {
     const installPackagePath = installPackage.match(/^file:(.*)?$/)[1];
-    const installPackageJson = require(path.join(installPackagePath, 'package.json'));
+    const installPackageJson = require(path.join(
+      installPackagePath,
+      'package.json'
+    ));
     return Promise.resolve(installPackageJson.name);
   }
   return Promise.resolve(installPackage);

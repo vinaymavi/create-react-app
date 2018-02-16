@@ -37,10 +37,10 @@ module.exports = function(
 
   // Setup the script rules
   appPackage.scripts = {
-    start: 'react-scripts start',
-    build: 'react-scripts build',
-    test: 'react-scripts test --env=jsdom',
-    eject: 'react-scripts eject',
+    start: 'nitro-react-scripts start',
+    build: 'nitro-react-scripts build',
+    test: 'nitro-react-scripts test --env=jsdom',
+    eject: 'nitro-react-scripts eject',
   };
 
   fs.writeFileSync(
